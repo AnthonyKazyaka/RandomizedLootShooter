@@ -24,33 +24,31 @@ public class RarityGenerator : MonoBehaviour
     public int numberOfUltraRare = 0;
     public int numberOfLegendary = 0;
 
-	// Use this for initialization
-	void Start () {
-	    GenerateNewRarities(numberOfNewItems);
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Use this for initialization
+    void Start()
+    {
+        GenerateNewRarities(numberOfNewItems);
+    }
 
-	    if (generateNewRarity)
-	    {
-	        generateNewRarity = false;
+    // Update is called once per frame
+    void Update()
+    {
+
+        if (generateNewRarity)
+        {
+            generateNewRarity = false;
             GenerateNewRarities(numberOfNewItems);
-	    }
-	}
+        }
+    }
 
     public void GenerateNewRarities(int numberofItems)
     {
         for (int i = 0; i < numberofItems; i++)
         {
-<<<<<<< HEAD
             int random1 = (int)(1000 * Random.value);
             int random2 = (int)(1000 * Random.value);
 
             int random = random1 + random2;
-=======
-            int random = (int) (1000 * Random.value);
->>>>>>> 8f141e322de0cd0a1d57f599979cef853fe1b881
 
             if (random <= 500)
             {
@@ -68,16 +66,10 @@ public class RarityGenerator : MonoBehaviour
             {
                 numberOfUltraRare++;
             }
-            else if(random > 995 && random <=1000)
+            else if (random > 995 && random <= 1000)
             {
                 numberOfLegendary++;
             }
-
-
-
-            //int rand1 = (int) (Random.value * 10);
-            //int rand2 = (int) (Random.value * 10);
-            //int rand3 = (int)(Random.value * 10);   
         }
 
     }
