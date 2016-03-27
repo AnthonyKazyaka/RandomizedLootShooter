@@ -43,7 +43,10 @@ public class RarityGenerator : MonoBehaviour
     {
         for (int i = 0; i < numberofItems; i++)
         {
-            int random = (int) (1000 * Random.value);
+            int random1 = (int)(1000 * Random.value);
+            int random2 = (int)(1000 * Random.value);
+
+            int random = random1 + random2;
 
             if (random <= 500)
             {

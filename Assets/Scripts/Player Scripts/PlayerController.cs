@@ -42,6 +42,6 @@ public class PlayerController : MonoBehaviour
         movementVector = gameObject.transform.position + (movementVector * MovementSpeed * Time.deltaTime);
 
         Debug.Log(movementVector);
-        gameObject.rigidbody.MovePosition(movementVector);
+        gameObject.GetComponent<Rigidbody>().MovePosition(movementVector);
     }
 }
