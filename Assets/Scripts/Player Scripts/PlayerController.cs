@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-﻿using UnityEngine;
-=======
 ﻿using System;
 using UnityEngine;
->>>>>>> 8f141e322de0cd0a1d57f599979cef853fe1b881
 using System.Collections;
 
 public class PlayerController : MonoBehaviour
@@ -17,47 +13,21 @@ public class PlayerController : MonoBehaviour
     }
 
     private float _minimumThumbstickThreshold = 0.05f;
-<<<<<<< HEAD
-    
-    // Use this for initialization
-	void Start () 
-=======
 
     private Vector3 _lookDirection = new Vector3();
-    
+
     // Use this for initialization
-	private void Start () 
->>>>>>> 8f141e322de0cd0a1d57f599979cef853fe1b881
+    private void Start()
     {
-	
-	}
-	
-	// Update is called once per frame
+
+    }
+
+    // Update is called once per frame
     private void Update()
     {
 
     }
 
-<<<<<<< HEAD
-    void FixedUpdate()
-    {
-        Vector3 movementVector = Vector3.zero;
-        if (Mathf.Abs(Xbox360Controller.Player1Contoller.LeftThumbstickX) > _minimumThumbstickThreshold)
-        {
-            movementVector += Xbox360Controller.Player1Contoller.LeftThumbstickX * gameObject.transform.right;
-            Debug.Log("Player 1 X!");
-        }
-        if (Mathf.Abs(Xbox360Controller.Player1Contoller.LeftThumbstickY) > _minimumThumbstickThreshold)
-        {
-            movementVector += Xbox360Controller.Player1Contoller.LeftThumbstickY * gameObject.transform.forward;
-            Debug.Log("Player 1 Y!");
-        }
-
-        movementVector = gameObject.transform.position + (movementVector * MovementSpeed * Time.deltaTime);
-
-        Debug.Log(movementVector);
-        gameObject.GetComponent<Rigidbody>().MovePosition(movementVector);
-=======
     private void FixedUpdate()
     {
         CheckThumbstickInput();
@@ -96,7 +66,6 @@ public class PlayerController : MonoBehaviour
 
         movementVector = gameObject.transform.position + (movementVector * MovementSpeed * Time.deltaTime);
 
-        gameObject.rigidbody.MovePosition(movementVector);
->>>>>>> 8f141e322de0cd0a1d57f599979cef853fe1b881
+        gameObject.GetComponent<Rigidbody>().MovePosition(movementVector);
     }
 }
