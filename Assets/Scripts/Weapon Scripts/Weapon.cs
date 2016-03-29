@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Bullet : Projectile
-{
+public class Weapon : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
